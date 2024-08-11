@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to main stylesheet -->
+    <link rel="stylesheet" href="certifications.css"> <!-- Link to certifications-specific stylesheet -->
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="certification.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="main-content">
+        <div class="certifications-container">
+            <h1>My Certifications</h1>
+            <p>Click Over the Certification Cards in order to diaplay my list of certifications</p>
+            <div class="certifications-list">
+                <div class="certification-card" onclick="showCertificates('ibm')">
+                    <img src="images/ibm.jpg" alt="IBM" class="certification-logo">
+                    <p>IBM</p>
+                </div>
+                <div class="certification-card" onclick="showCertificates('hackerrank')">
+                    <img src="images/hackerrank.png" alt="HackerRank" class="certification-logo">
+                    <p>HackerRank</p>
+                </div>
+                <div class="certification-card" onclick="showCertificates('coursera')">
+                    <img src="images/coursera.png" alt="Coursera" class="certification-logo">
+                    <p>Coursera</p>
+                </div>
+                <div class="certification-card" onclick="showCertificates('linkedin')">
+                    <img src="images/linkedln.png" alt="LinkedIn" class="certification-logo">
+                    <p>LinkedIn</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sections to display certificates -->
+        <div id="ibm-certificates" class="certificates-section" style="display: none;">
+            <h2>IBM Certificates</h2>
+            <div class="certificates-list">
+                <img src="images/ibm1.png" alt="IBM Certificate 1" class="certificate-img">
+                <img src="images/ibm2.png" alt="IBM Certificate 2" class="certificate-img">
+                <img src="images/ibm3.png" alt="IBM Certificate 3" class="certificate-img">
+                <img src="images/ibm4.png" alt="IBM Certificate 4" class="certificate-img">
+                <img src="images/ibm5.png" alt="IBM Certificate 5" class="certificate-img">
+                <img src="images/ibm6.png" alt="IBM Certificate 6" class="certificate-img">
+                <img src="images/ibm7.png" alt="IBM Certificate 7" class="certificate-img">
+            </div>
+        </div>
+
+        <div id="hackerrank-certificates" class="certificates-section" style="display: none;">
+            <h2>HackerRank Certificates</h2>
+            <div class="certificates-list">
+                <img src="images/python1.png" alt="HackerRank Certificate 1" class="certificate-img">
+                <img src="images/sql1.png" alt="HackerRank Certificate 2" class="certificate-img">
+            </div>
+        </div>
+
+        <div id="coursera-certificates" class="certificates-section" style="display: none;">
+            <h2>Coursera Certificates</h2>
+            <div class="certificates-list">
+                <img src="images/coursera1.png" alt="Coursera Certificate 1" class="certificate-img">
+                <img src="images/coursera2.png" alt="Coursera Certificate 2" class="certificate-img">
+                <img src="images/coursera3.png" alt="Coursera Certificate 3" class="certificate-img">
+                <img src="images/coursera4.png" alt="Coursera Certificate 4" class="certificate-img">
+                <img src="images/coursera5.png" alt="Coursera Certificate 5" class="certificate-img">
+                <img src="images/coursera6.png" alt="Coursera Certificate 6" class="certificate-img">
+                <img src="images/coursera7.png" alt="Coursera Certificate 7" class="certificate-img">
+                
+                
+            </div>
+        </div>
+
+        <div id="linkedin-certificates" class="certificates-section" style="display: none;">
+            <h2>LinkedIn Certificates</h2>
+            <div class="certificates-list">
+                <img src="images/linkedin1.png" alt="LinkedIn Certificate 1" class="certificate-img">
+                <img src="images/linkedin2.png" alt="LinkedIn Certificate 2" class="certificate-img">
+                <img src="images/linkedin3.png" alt="LinkedIn Certificate 3" class="certificate-img">
+                <img src="images/linkedin4.png" alt="LinkedIn Certificate 4" class="certificate-img">
+                <img src="images/linkedin5.png" alt="LinkedIn Certificate 5" class="certificate-img">
+                <img src="images/linkedin6.png" alt="LinkedIn Certificate 6" class="certificate-img">
+                <img src="images/linkedin7.png" alt="LinkedIn Certificate 7" class="certificate-img">
+                <img src="images/linkedin8.png" alt="LinkedIn Certificate 8" class="certificate-img">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showCertificates(certification) {
+            // Hide all certificate sections
+            document.getElementById('ibm-certificates').style.display = 'none';
+            document.getElementById('hackerrank-certificates').style.display = 'none';
+            document.getElementById('coursera-certificates').style.display = 'none';
+            document.getElementById('linkedin-certificates').style.display = 'none';
+
+            // Show the selected certificate section
+            document.getElementById(certification + '-certificates').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

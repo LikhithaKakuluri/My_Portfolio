@@ -1,0 +1,323 @@
+/* General styles for body and navbar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+
+}
+.container {
+    padding: 60px 20px;
+    color: #FFFFFF; /* White text color */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center content vertically */
+    min-height: 100vh; /* Ensure container takes up full viewport height */
+}
+
+.main-content {
+    flex: 1; /* Allows container to expand and take available space */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+.about-container {
+    text-align: center; /* Center text within the container */
+    padding: 60px 20px;
+    max-width: 800px; /* Limit the width of the content */
+    color: #FFFFFF; /* Text color for better readability */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+}
+.text-container.flashcard {
+    background-color: #ffffff; /* White flashcard */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.text-container h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333333; /* Dark heading color */
+}
+
+.text-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666666; /* Slightly lighter color for paragraph text */
+}
+
+.photo-container {
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    border-radius: 15px; /* Round edges, not fully rounded */
+    width: 320px; /* Adjust size as needed */
+    height: 320px; /* Adjust size as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+.profile-photo:hover {
+    transform: scale(1.1); /* Slightly enlarge the item on hover */
+}
+
+/* General styles for skills section */
+.skills-container {
+    text-align: center;
+    padding: 60px 20px;
+    color: #ffffff;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    width: 150px;
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.skill-logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.skill-description p {
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
+
+.certifications-container {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #FFFFFF; /* Text color set to black */
+}
+
+.certifications-list {
+    display: flex;
+    justify-content: center; /* Aligns flashcards horizontally */
+    gap: 20px;
+}
+
+.certification-card {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    color: #000000; /* Set text color inside the card to black */
+}
+
+.certification-card:hover {
+    transform: scale(1.1);
+}
+
+.certification-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.certificates-section {
+    text-align: center;
+    margin-top: 80px;
+    color: #FFFFFF; 
+
+}
+
+.certificates-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.certificate-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.projects-container {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    width: 250px;
+    height: 150px;
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card-content {
+    text-align: center;
+}
+
+.project-card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: black;
+}
+
+.project-card-content p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: black;
+}
+
+
+/* Contact Main Styles */
+.contact-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+.contact-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.icon-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 0 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
