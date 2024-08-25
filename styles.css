@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
+    
 }
 
 .navbar {
@@ -27,66 +28,97 @@ body {
 
 .navbar a:hover {
     text-decoration: underline;
-
 }
+
 .container {
-    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    text-align: center; /* Center text inside the container */
+}
+
+.container h1, .container p {
     color: #FFFFFF; /* White text color */
-    text-align: center; /* Center text horizontally */
-    display: flex; /* Use flexbox for vertical centering */
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center content vertically */
-    min-height: 100vh; /* Ensure container takes up full viewport height */
+    margin: 0; /* Remove default margins */
+}
+
+/* Optional: Add some space around the heading and paragraph */
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 18px;
 }
 
 .main-content {
-    flex: 1; /* Allows container to expand and take available space */
     display: flex;
-    align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
+    align-items: center;
+    height: 100vh; /* Ensure content takes up full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .about-container {
-    text-align: center; /* Center text within the container */
-    padding: 60px 20px;
-    max-width: 800px; /* Limit the width of the content */
-    color: #FFFFFF; /* Text color for better readability */
-    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between items */
+    width: 100%;
+    max-width: 1200px;
+    color: #FFFFFF; /* White text color */
+    box-sizing: border-box;
 }
-.text-container.flashcard {
-    background-color: #ffffff; /* White flashcard */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+.text-container {
+    flex: 2; /* Takes up more space */
     padding: 20px;
-    max-width: 600px;
-    text-align: center;
-}
-
-.text-container h1 {
-    margin-bottom: 20px;
-    font-size: 32px;
-    color: #333333; /* Dark heading color */
-}
-
-.text-container p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666666; /* Slightly lighter color for paragraph text */
+    color: #FFFFFF; /* White text color */
+    text-align: left;
 }
 
 .photo-container {
-    margin-bottom: 20px;
+    flex: 2; /* Adjust as needed for more or less space */
+    display: flex;
+    justify-content: flex-end; /* Align the image to the end (right) */
 }
 
 .profile-photo {
-    border-radius: 15px; /* Round edges, not fully rounded */
-    width: 320px; /* Adjust size as needed */
-    height: 320px; /* Adjust size as needed */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    width: 520px;
+    height: 720px;
 }
-.profile-photo:hover {
-    transform: scale(1.1); /* Slightly enlarge the item on hover */
+
+#heading-text {
+    text-align: center; /* Center the About Me heading */
+    margin-bottom: 15px; /* Space below the heading */
 }
+
+#animated-text {
+    /* Ensure proper spacing and line breaks */
+    line-height: 1.6; /* Adjust line height for better readability */
+}
+
+#animated-text h3 {
+    margin: 18px 0; /* Space around section headings */
+}
+
+.word {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    white-space: pre; /* Preserve spacing between words */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
 
 /* General styles for skills section */
 .skills-container {
@@ -239,85 +271,125 @@ body {
 }
 
 
-/* Contact Main Styles */
-.contact-main {
-    flex: 1;
+.contact-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    min-height: 80vh; /* Adjust as needed */
 }
 
-.contact-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+.left-side {
+    flex: 2;
     display: flex;
     flex-direction: column;
-}
-
-.contact-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-.contact-form button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.contact-form button:hover {
-    background-color: #45a049;
-}
-
-/* Footer Styles */
-.contact-footer {
-    display: flex;
     justify-content: center;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    padding-right: 20px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.left-side h1 {
+    margin-bottom: 20px;
+    color: #FFFFFF; /* White text color */
+    font-size: 40px; /* Increase font size as needed */
+}
+
+
+.download-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #007BFF; /* Adjust the color as needed */
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.right-side {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.right-side h2 {
+    margin-bottom: 20px;
+    color: #FFFFFF; /* White text color */
+}
+
+.right-side form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    max-width: 500px; /* Adjust width as needed */
 }
 
-.icon-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.right-side label {
+    margin: 10px 0 5px;
+    color: #FFFFFF; /* White text color */
+}
+
+.right-side input,
+.right-side textarea {
     padding: 10px;
-    margin: 0 10px;
-    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.icon-card:hover {
-    transform: translateY(-5px);
+.right-side button {
+    padding: 15px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #28a745; /* Adjust the color as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.contact-icon {
-    width: 40px;
-    height: 40px;
-    display: block;
+.right-side button:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer i {
+    margin-right: 10px;
+    font-size: 20px; /* Adjust icon size */
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
