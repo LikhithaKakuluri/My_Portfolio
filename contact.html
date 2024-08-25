@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="navbar">
@@ -16,57 +17,39 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <div class="contact-main">
+    <div class="contact-container">
+        <div class="left-side">
+            <h1>Let's Work Together</h1>
+            <a href="https://drive.google.com/file/d/1X-ymW68FvBQ-XDYvt0U7vGwe8DmTJZyw/view?usp=sharing" class="download-btn">Download My CV</a>
+        </div>
 
-        <form class="contact-form" action="https://formspree.io/f/mpwarowv" method="POST" data-tf-redirect="thankyou.html">
-            <h1>Contact Me</h1>
-            
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <div class="right-side">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="https://formspree.io/f/mpwarowv" method="POST" data-tf-redirect="thankyou.html">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="Phone Number">Phone Number:</label>
-            <input type="text" id="Phone Number" name="Phone Number">
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            
-            <button type="submit">Send Message</button>
-          
-        </form>
-        
-    </div>
-    
-    <div class="contact-footer">
-        <div class="icon-card">
-            <a href="mailto:kakulurilikhitha531@gmail.com" target="_blank">
-                <img src="images/mail.png" alt="Email Icon" class="contact-icon">
-            </a>
-        </div>
-        <div class="icon-card">
-            <a href="tel:+919032606246">
-                <img src="images/phone.png" alt="Phone Icon" class="contact-icon">
-            </a>
-        </div>
-        <div class="icon-card">
-            <a href="https://instagram.com/mysteriousfriend71" target="_blank">
-                <img src="images/instagram.png" alt="Instagram Icon" class="contact-icon">
-            </a>
-        </div>
-        <div class="icon-card">
-            <a href="www.linkedin.com/in/kakuluri-likhitha-yadhav-58b195216" target="_blank">
-                <img src="images/linkedin.png" alt="LinkedIn Icon" class="contact-icon">
-            </a>
-        </div>
-        <div class="icon-card">
-            <a href="https://drive.google.com/file/d/1uUwq50RwWYlys3ddrxKdD2Nn2HjnoXRt/view?usp=sharing" download>
-                <img src="images/cv.png" alt="Download CV Icon" class="contact-icon">
-            </a>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
+
+    <footer>
+        <p><i class="fas fa-envelope"></i> Email: kakulurilikhitha531@gmail.com.com</p>
+        <p><i class="fas fa-phone"></i> Contact: +919032606246</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/kakuluri-likhitha-yadhav-58b195216/" target="_blank">LinkedIn Profile</a></p>
+    </footer>
 </body>
 </html>
+
 
     
